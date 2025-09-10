@@ -5,7 +5,7 @@ close all
 
 
 source = [-6]; % INPUT ELEMENT
-slope = 0.7 % slope parameter
+slope = 0.8 % slope parameter
 Ps = 4.16; %Power per source
 ZspanM = 750; %Propagation distance
 start_slop = 600;
@@ -33,7 +33,7 @@ H=1*zeros(M);
 H=H+diag(ones(1,M-1),1);
 H=H+1*diag(ones(1,M-1),-1);
 
-dslpoe = 0.0425*0.8
+dslpoe = 0.0425*slope
 
 for io=1:M/2
 	H(io,io)= dslpoe*(io)^main_slope  / ((M/2)^(main_slope-1) *main_slope ) ;
@@ -191,6 +191,7 @@ surf(real(Pot)); shading interp
 
 
 (sum(abs(E_inC(:,1)).^2))/(sum(abs(E_inC(:,end)).^2))
+
 
 
 
