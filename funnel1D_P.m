@@ -4,7 +4,7 @@ close all
 
 
 
-source = [-6]; % INPUT ELEMENT
+source = [-7]; % INPUT ELEMENT
 slope = 0.8 % slope parameter
 Ps = 4.16; %Power per source
 ZspanM = 750; %Propagation distance
@@ -191,6 +191,7 @@ surf(real(Pot)); shading interp
 
 
 (sum(abs(E_inC(:,1)).^2))/(sum(abs(E_inC(:,end)).^2))
+
 
 
 
